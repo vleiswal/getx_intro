@@ -27,7 +27,7 @@ class UserListModel {
         data.add(new Data.fromJson(v));
       });
     }
-    ad = json['ad'] != null ? new Ad.fromJason(json['ad']) : null;
+    ad = json['ad'] != null ? new Ad.fromJson(json['ad']) : null;
   }
 
   Map<String, dynamic> toJson() {
@@ -61,7 +61,7 @@ class Data {
     this.avatar,
   });
 
-  Data.fromJson(Map<String, dynamic>) json{
+  Data.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     email = json['email'];
     firstName = json['first_name'];
@@ -69,8 +69,8 @@ class Data {
     avatar = json['avatar'];
   }
 
-  Map<String, dynamic> toJson(){
-    final Map<String, dynamic> data = new Map<String,dynamic>();
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
     data['id'] = this.id;
     data['email'] = this.email;
     data['first_name'] = this.firstName;
@@ -78,28 +78,26 @@ class Data {
     data['avatar'] = this.avatar;
     return data;
   }
-
-
 }
- 
- class Ad {
-   String company;
-   String url;
-   String text;
 
-   Ad({this.company,this.url,this.text});
+class Ad {
+  String company;
+  String url;
+  String text;
 
-   Ad.fromJson(Map<String, dynamic> json) {
-     company = json['company'];
-     url = json['url'];
-     text = json['text'];
-   }
+  Ad({this.company, this.url, this.text});
 
-   Map<String, dynamic> toJson(){
-     final Map<String, dynamic> data = new Map<String,dynamic>();
-     data['company'] = this.company;
-     data['url'] = this.url;
-     data['text'] = this.text;
-     return data;
-   }
- }
+  Ad.fromJson(Map<String, dynamic> json) {
+    company = json['company'];
+    url = json['url'];
+    text = json['text'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['company'] = this.company;
+    data['url'] = this.url;
+    data['text'] = this.text;
+    return data;
+  }
+}
