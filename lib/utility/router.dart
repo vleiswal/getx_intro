@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:getx_intro/view/home_view.dart';
+import 'package:getx_intro/view/login_view.dart';
 
 class Router {
   static final route = [
