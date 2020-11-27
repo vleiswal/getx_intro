@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:getx_intro/utility/router.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
