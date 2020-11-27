@@ -93,7 +93,28 @@ class LoginView extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16),
-                  MaterialButton()
+                  MaterialButton(
+                    color: Colors.deepOrangeAccent,
+                    splashColor: Colors.white,
+                    height: 45,
+                    minWidth: Get.width / 2,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Text(
+                      'Login',
+                      style: GoogleFonts.exo2(
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                    onPressed: () {
+                      if (_formKey.currentState.validate()) {
+                        _loginController.apiLogin();
+                      }
+                    },
+                  )
                 ],
               ))),
     );
