@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_intro/controller/home_controller.dart';
+import 'package:getx_intro/controller/login_controller.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeView extends StatelessWidget {
   final LoginController _loginController = Get.find();
-  final HomeController _homeController = Get.put(HomeController);
+  final HomeController _homeController = Get.put(HomeController());
   @override
   Widget build(BuildContext context) {
     print(_loginController.emailTextController.text);

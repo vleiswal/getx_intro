@@ -29,9 +29,9 @@ class HomeController extends GetxController {
     }).catchError((onError) {
       print(onError);
     });
+  }
 
-    void deleteItem(int index) {
-      userListData.removeAt(index);
-    }
+  void deleteItem(int index) {
+    userListData.removeAt(index);
   }
 }

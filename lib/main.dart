@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:getx_intro/utility/router.dart';
+import 'package:getx_intro/utility/router1.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,7 +10,7 @@ void main() {
       title: 'Getx App',
       debugShowCheckedModeBanner: false,
       defaultTransition: Transition.rightToLeft,
-      getPages: Router.route,
+      getPages: Router1.route,
       initialRoute: '/loginView',
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
